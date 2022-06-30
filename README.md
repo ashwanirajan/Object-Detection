@@ -15,9 +15,7 @@ The goal of this project is to perform object detection on Common Objects in Con
 
 For this project, we use the two state-of-the-art models for object detection, Yolo-v5 and Faster-RCNN. We started with the [**Faster RCNN model**](https://arxiv.org/abs/1506.01497) for object detection. We used the Faster RCNN model from torchvision with **ResNet-50-FPN backbone** with pretrained weights trained on Imagenet. We directly used the **train_one_epoch** and **evaluate** functions from torchvision's [github repository](https://github.com/pytorch/vision.git) to fine tune the model. 
 
-To use [**Yolo-v5**](https://docs.ultralytics.com/) for object detection.
-
-<Yolo>
+[**Yolo-v5**](https://docs.ultralytics.com/) is a family of compound-scaled object detection models trained on COCO dataset. YOLO an acronym for "You only look once' is an algorithm that divides images into a grid system. We checked the performance of pretrained YOLO on the COCO validation dataset and further trained 3 epochs on the architecture taking the weights from YOLO.
 
 ## Results
 
@@ -32,8 +30,14 @@ Here are some examples of the results:
 |----- | ----- |
 |<img src="./Images/ex1.png"> | <img src="./Images/ex2.png">|
 
-<Yolo>
+**Yolo model** :  The pre-trained model has the Average Precision IOU 50:95 raised to 0.493.
 
+The pre-trained model was further trained for 3 epochs with a constant learning rate of 0.01. With these epochs we see a very minor improvement in the Average Precision IOU 50:95 raised to 0.506.
+
+Here is an example of the result:
+|  |  |
+|----- | ----- |
+|<img src="./Images/ex3.jpeg"> 
 
 ## Installations
 
