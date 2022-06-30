@@ -49,6 +49,7 @@ Here is an example of the result:
 |<img src="./Images/ex3.jpeg"> 
 
 </p>
+
 ## Installations
 
 To use the notebook, you would need to install fiftyone library and latest version of torchvision. Yoo would also need to clone the pytroch's vision repository and copy the required files (engine.py, transforms.py, utils.py) from references folder to your working directory. Once all the dependencies are installed, you should be able to replicate the results using the **Faster-RCNN-COCO.ipynb** notebook. 
