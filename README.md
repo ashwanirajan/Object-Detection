@@ -13,7 +13,9 @@ The goal of this project is to perform object detection on Common Objects in Con
 
 <img style="float: right; size: 100px" src="./Images/faster-RCNN.png" width="300" height="200">
 
-For this project, we use the two state-of-the-art models for object detection, Yolo-v5 and Faster-RCNN. We started with the [**Faster RCNN model**](https://arxiv.org/abs/1506.01497) for object detection. We used the Faster RCNN model from torchvision with **ResNet-50-FPN backbone** with pretrained weights trained on Imagenet. We directly used the **train_one_epoch** and **evaluate** functions from torchvision's [github repository](https://github.com/pytorch/vision.git) to fine tune the model.
+For this project, we use the two state-of-the-art models for object detection, Yolo-v5 and Faster-RCNN. We started with the [**Faster RCNN model**](https://arxiv.org/abs/1506.01497) for object detection. We used the Faster RCNN model from torchvision with **ResNet-50-FPN backbone** with pretrained weights trained on Imagenet. We directly used the **train_one_epoch** and **evaluate** functions from torchvision's [github repository](https://github.com/pytorch/vision.git) to fine tune the model. 
+
+To use [**Yolo-v5**](https://docs.ultralytics.com/) for object detection.
 
 <Yolo>
 
@@ -32,6 +34,7 @@ Here are some examples of the results:
 
 <Yolo>
 
+
 ## Installations
 
 To use the notebook, you would need to install fiftyone library and latest version of torchvision. Yoo would also need to clone the pytroch's vision repository and copy the required files (engine.py, transforms.py, utils.py) from references folder to your working directory. Once all the dependencies are installed, you should be able to replicate the results using the **Faster-RCNN-COCO.ipynb** notebook. 
@@ -42,4 +45,7 @@ To use the notebook, you would need to install fiftyone library and latest versi
 !pip install opencv-python-headless==4.5.4.60 # needed only if there's an open-cv related error 
 
 git clone https://github.com/pytorch/vision.git
+!git clone https://github.com/ultralytics/yolov5 
+!cd yolov5
+!pip install -qr requirements.txt
 ```
