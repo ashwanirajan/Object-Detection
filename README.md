@@ -49,8 +49,11 @@ To use the notebook, you would need to install fiftyone library and latest versi
 !pip install opencv-python-headless==4.5.4.60 # needed only if there's an open-cv related error 
 
 git clone https://github.com/pytorch/vision.git
+```
 
 To use yolov5, you would need to clone the ultralytics's repository for yolo5 to your working directory and install the requirements in the requirement.txt.
+
+```
 !git clone https://github.com/ultralytics/yolov5 
 !cd yolov5
 !pip install -qr requirements.txt
